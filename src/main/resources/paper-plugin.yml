@@ -1,0 +1,4 @@
+name: MagicalCampfire
+version: '1.0-SNAPSHOT'
+main: org.twipnetwork.magicalCampfire.MagicalCampfire
+api-version: '1.21'
