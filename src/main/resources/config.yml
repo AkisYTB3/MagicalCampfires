@@ -1,0 +1,8 @@
+# config.yml
+
+# regenInterval sets how often the regen task should run (in ticks, 20 ticks = 1 second)
+# everytime the task runs it regenerates half a heart. (default: 40)
+regenInterval: 40
+
+# worksWithSoul defines whether soul campfires regen as well. (default: false)
+worksWithSoul: false

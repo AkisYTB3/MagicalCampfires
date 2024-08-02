@@ -6,7 +6,8 @@ public final class MagicalCampfire extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        getServer().getPluginManager().registerEvents(new MagicalCampfireListener(), this);
+        saveDefaultConfig();
+        getServer().getPluginManager().registerEvents(new MagicalCampfireListener(this), this);
         getLogger().info("MagicalCampfire Plugin Enabled!");
     }
 
@@ -15,4 +16,3 @@ public final class MagicalCampfire extends JavaPlugin {
         getLogger().info("MagicalCampfire Plugin Disabled!");
     }
 }
-
