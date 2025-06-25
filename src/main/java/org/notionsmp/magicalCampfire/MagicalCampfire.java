@@ -1,14 +1,17 @@
 package org.notionsmp.magicalCampfire;
 
 import co.aikar.commands.PaperCommandManager;
+import com.tcoded.folialib.FoliaLib;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class MagicalCampfire extends JavaPlugin {
     private static MagicalCampfire instance;
     private MagicalCampfireListener listener;
+    public FoliaLib foliaLib;
 
     @Override
     public void onEnable() {
+        foliaLib = new FoliaLib(this);
         instance = this;
         saveDefaultConfig();
         listener = new MagicalCampfireListener();

@@ -12,16 +12,20 @@ repositories {
     maven { url 'https://repo.papermc.io/repository/maven-public/' }
     maven { url 'https://oss.sonatype.org/content/groups/public/' }
     maven { url 'https://repo.aikar.co/content/groups/aikar/' }
+    maven { url 'https://jitpack.io' }
+    maven { url 'https://repo.tcoded.com/releases' }
 }
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.19-R0.1-SNAPSHOT")
     implementation("co.aikar:acf-paper:0.5.1-SNAPSHOT")
+    implementation("com.tcoded:FoliaLib:0.5.1")
 }
 
 shadowJar {
     relocate 'co.aikar.commands', 'org.notionsmp.libs.acf'
     relocate 'co.aikar.locales', 'org.notionsmp.libs.locales'
+    relocate 'com.tcoded.folialib', 'org.notionsmp.libs.folialib'
 
     exclude 'META-INF/**'
 

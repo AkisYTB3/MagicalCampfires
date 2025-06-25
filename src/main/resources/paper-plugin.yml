@@ -3,6 +3,7 @@ version: '${version}'
 main: org.notionsmp.magicalCampfire.MagicalCampfire
 api-version: '1.19'
 author: "Akis (discord: yeahakis)"
+folia-supported: true
 permissions:
   magicalcampfire.reload:
     default: op

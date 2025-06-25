@@ -36,27 +36,21 @@ public class MagicalCampfireListener implements Listener {
     }
 
     private void startCampfireTask() {
-        new BukkitRunnable() {
-            @Override
-            public void run() {
-                if (!globalEnabled || !campfireSettings.enabled) return;
-                for (Player player : Bukkit.getOnlinePlayers()) {
-                    handleCampfire(player, Material.CAMPFIRE, campfireSettings);
-                }
+        MagicalCampfire.getInstance().foliaLib.getScheduler().runTimerAsync(() -> {
+            if (!globalEnabled || !campfireSettings.enabled) return;
+            for (Player player : Bukkit.getOnlinePlayers()) {
+                handleCampfire(player, Material.CAMPFIRE, campfireSettings);
             }
-        }.runTaskTimer(MagicalCampfire.getInstance(), 0L, campfireSettings.interval);
+        },0L, campfireSettings.interval);
     }
 
     private void startSoulCampfireTask() {
-        new BukkitRunnable() {
-            @Override
-            public void run() {
-                if (!globalEnabled || !soulCampfireSettings.enabled) return;
-                for (Player player : Bukkit.getOnlinePlayers()) {
-                    handleCampfire(player, Material.SOUL_CAMPFIRE, soulCampfireSettings);
-                }
+        MagicalCampfire.getInstance().foliaLib.getScheduler().runTimerAsync(() -> {
+            if (!globalEnabled || !soulCampfireSettings.enabled) return;
+            for (Player player : Bukkit.getOnlinePlayers()) {
+                handleCampfire(player, Material.SOUL_CAMPFIRE, soulCampfireSettings);
             }
-        }.runTaskTimer(MagicalCampfire.getInstance(), 0L, soulCampfireSettings.interval);
+        },0L, soulCampfireSettings.interval);
     }
 
     private void handleCampfire(Player player, Material type, CampfireSettings settings) {
