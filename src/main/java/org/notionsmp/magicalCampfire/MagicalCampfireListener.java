@@ -61,6 +61,9 @@ public class MagicalCampfireListener implements Listener {
 
     private void handleCampfire(Player player, Material type, CampfireSettings settings) {
         Location playerLoc = player.getLocation();
+        if (player.isDead() || player.getGameMode() == GameMode.SPECTATOR) {
+            return;
+        }
         boolean inRange = false;
 
         for (int x = -settings.range; x <= settings.range; x++) {
