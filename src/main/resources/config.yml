@@ -17,4 +17,4 @@ settings:
     range: 4
     actionbar:
       enabled: false
-      message: "<gold>You're getting healed by a campfire"
+      message: "<blue>You're getting healed by a soul campfire"
