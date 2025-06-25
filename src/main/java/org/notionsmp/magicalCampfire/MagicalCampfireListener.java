@@ -69,6 +69,10 @@ public class MagicalCampfireListener implements Listener {
                     Location loc = playerLoc.clone().add(x, y, z);
                     Block block = loc.getBlock();
                     if (block.getType() == type) {
+                        if (!settings.isLit) {
+                            inRange = true;
+                            break;
+                        }
                         BlockData data = block.getBlockData();
                         if (data instanceof Campfire && ((Campfire) data).isLit()) {
                             inRange = true;
@@ -90,6 +94,7 @@ public class MagicalCampfireListener implements Listener {
 
     private static class CampfireSettings {
         public final boolean enabled;
+        public final boolean isLit;
         public final int interval;
         public final double amount;
         public final int range;
@@ -98,6 +103,7 @@ public class MagicalCampfireListener implements Listener {
 
         public CampfireSettings(ConfigurationSection section) {
             enabled = section.getBoolean("enabled", true);
+            isLit = section.getBoolean("is_lit", true);
             interval = section.getInt("interval", 40);
             amount = section.getDouble("amount", 1);
             range = section.getInt("range", 3);
