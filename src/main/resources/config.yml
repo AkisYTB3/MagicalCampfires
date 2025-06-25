@@ -1,8 +1,18 @@
-# config.yml
-
-# regenInterval sets how often the regen task should run (in ticks, 20 ticks = 1 second)
-# everytime the task runs it regenerates half a heart. (default: 40)
-regenInterval: 40
-
-# worksWithSoul defines whether soul campfires regen as well. (default: false)
-worksWithSoul: false
+settings:
+  enabled: true # if false, overrides campfire.enabled and soul_campfire.enabled
+  campfire:
+    enabled: true # if normal campfires should heal
+    interval: 40 # time in ticks
+    amount: 1 # 1 = half heart (1 hp)
+    range: 3 # range in blocks into every direction
+    actionbar: # as soon as not in range, don't show
+      enabled: true # if it should show an actionbar message while in range of a campfire
+      message: "<gold>You're getting healed by a campfire" # the message to display while in range
+  soul_campfire:
+    enabled: true
+    interval: 60
+    amount: 1
+    range: 4
+    actionbar:
+      enabled: false
+      message: "<gold>You're getting healed by a campfire"

@@ -1,4 +1,8 @@
 name: MagicalCampfire
-version: '1.0-SNAPSHOT'
-main: org.twipnetwork.magicalCampfire.MagicalCampfire
-api-version: '1.21'
+version: '${version}'
+main: org.notionsmp.magicalCampfire.MagicalCampfire
+api-version: '1.19'
+author: "Akis (discord: yeahakis)"
+permissions:
+  magicalcampfire.reload:
+    default: op
