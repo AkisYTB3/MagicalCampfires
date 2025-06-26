@@ -1,1 +1,9 @@
-rootProject.name = 'MagicalCampfire'
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        maven { url 'https://maven.fabricmc.net/' }
+    }
+}
+
+rootProject.name = 'MagicalCampfires'
+include 'paper', 'fabric'
