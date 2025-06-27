@@ -3,8 +3,8 @@ plugins {
 }
 
 allprojects {
-    group = 'org.notionsmp'
-    version = '2.1-BETA'
+    version = project.version
+    group = project.group
 
     repositories {
         mavenCentral()

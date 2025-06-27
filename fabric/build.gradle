@@ -3,9 +3,6 @@ plugins {
     id 'maven-publish'
 }
 
-version = project.version
-group = project.group
-
 base {
     archivesName = "MagicalCampfires-fabric"
 }
