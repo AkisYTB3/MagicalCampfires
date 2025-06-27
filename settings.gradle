@@ -6,4 +6,4 @@ pluginManagement {
 }
 
 rootProject.name = 'MagicalCampfires'
-include 'paper', 'fabric'
+include 'paper', 'fabric', 'spigot'

@@ -1,0 +1,8 @@
+name: MagicalCampfire
+version: '${version}'
+main: org.notionsmp.magicalCampfire.MagicalCampfire
+api-version: '1.18'
+author: "Akis (discord: yeahakis)"
+permissions:
+  magicalcampfire.reload:
+    default: op

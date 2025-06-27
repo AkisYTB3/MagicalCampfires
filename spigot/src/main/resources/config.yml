@@ -1,0 +1,20 @@
+settings:
+  enabled: true # if false, overrides campfire.enabled and soul_campfire.enabled
+  campfire:
+    enabled: true # if normal campfires should heal
+    interval: 40 # time in ticks
+    is_lit: true # whether the campfire has to be lit to heal the player
+    amount: 1 # 1 = half heart (1 hp)
+    range: 3 # range in blocks into every direction
+    actionbar: # as soon as not in range, don't show
+      enabled: true # if it should show an actionbar message while in range of a campfire
+      message: "§6You're getting healed by a campfire" # the message to display while in range
+  soul_campfire:
+    enabled: false
+    interval: 60
+    is_lit: true
+    amount: 1
+    range: 4
+    actionbar:
+      enabled: false
+      message: "§9You're getting healed by a soul campfire"
